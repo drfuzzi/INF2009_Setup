@@ -1,1 +1,1 @@
-# INF2009_Lab1
+# INF2009 Setup
