@@ -1,73 +1,128 @@
-**Using Raspberry Pi 4 for Edge Computing**
+### Guide on how to configure the Raspberry Pi 400 with a Webcam
 
-**Objective:** By the end of this session, participants will be able to set up their Raspberry Pi 4 for edge computing, understand its capabilities, and initiate an ML project.
+#### Materials Needed
+- Raspberry Pi 400
+- Compatible webcam
+- MicroSD card with NOOBS or Raspberry Pi OS
+- Monitor, keyboard, mouse
+- Speakers or headphones
+- Internet connection
 
----
+#### Section 1: Setting Up Raspberry Pi 400
+1. **Assembling Hardware**:
+   - Connect the Raspberry Pi 400 to the monitor, keyboard, and mouse.
+   - Insert the MicroSD card into the slot.
 
-**Prerequisites:**
-1. Raspberry Pi 4 with Raspbian OS installed.
-2. MicroSD card (16GB or more recommended).
-3. Internet connectivity (Wi-Fi).
-4. Basic knowledge of Python and Linux commands.
+2. **Install Raspberry Pi OS**:
+Download the official imager software from the following link and install it.
+https://downloads.raspberrypi.org/imager/imager_latest.exe
+Connect the microSD card into the PC
+Start the Imager software
+Choose the following options and click 'Next':
 
----
+You will see the following when you click on "Edit Settings".
+Give a unique name for your RPi hostname.
+Pick an appropriate username and password
+Configure the WiFi to your hotspot (SIT WiFi doesnt work well with RPi)
+Click on "Save"
+Click on "Yes" and "Yes" again.
 
-**1. Introduction (10 minutes)**
-- Brief on Edge Computing.
-- Importance and advantages of using Raspberry Pi for edge computing.
 
-**2. Initial Setup (20 minutes)**
-- Booting up the Raspberry Pi.
-- Setting up Wi-Fi/Ethernet.
-- Basic Raspbian OS exploration.
-- Updating and upgrading the OS using terminal commands.
-  ```bash
-  sudo apt update
-  sudo apt upgrade
-  ```
 
-**3. Setting up Development Environment (20 minutes)**
-- Installing Python and pip.
-  ```bash
-  sudo apt install python3 python3-pip
-  ```
-- Setting up virtual environments.
-  ```bash
-  sudo pip3 install virtualenv
-  virtualenv myenv
-  source myenv/bin/activate
-  ```
 
-**4. Introduction to Edge Computing on Raspberry Pi (20 minutes)**
-- Discussion on the capabilities of Raspberry Pi in the context of edge computing.
-- Setting up Docker (useful for deploying ML models).
-  ```bash
-  curl -sSL https://get.docker.com | sh
-  sudo usermod -aG docker pi
-  ```
 
-**5. Setting up Tools for ML (30 minutes)**
-- Installing TensorFlow Lite (optimized for Raspberry Pi).
-  ```bash
-  pip3 install tflite-runtime
-  ```
-- Brief on popular ML projects possible with Raspberry Pi (e.g., image recognition, speech-to-text).
-- Setting up cameras or microphones if needed.
 
-**6. Starting a Simple ML Project (15 minutes)**
-- Loading a pre-trained TensorFlow Lite model.
-- Running inference on sample data.
-- Discussing results and potential optimizations.
 
----
+   - Power on the Raspberry Pi.
+   - Follow the on-screen instructions to install the OS.
 
-**Homework/Extended Activities:**
-1. Set up a real-time object detection system using Raspberry Pi and a camera module.
-2. Explore deploying a custom-trained model onto the Raspberry Pi.
+#### Section 2: Configuring Raspberry Pi
+1. **Connect to Wi-Fi**: 
+   - Click on the Wi-Fi icon in the top right corner and connect to your network.
 
----
+2. **Update the System**:
+   - Open Terminal.
+   - Update the system with the following commands:
+     ```
+     sudo apt update
+     sudo apt upgrade
+     ```
 
-**Resources:**
-1. Raspberry Pi official documentation.
-2. TensorFlow Lite documentation for Raspberry Pi.
-3. Docker documentation.
+#### Section 3: Setting Up and Testing the Webcam
+1. **Connecting the Webcam**:
+   - Plug the webcam into a USB port on the Raspberry Pi.
+
+2. **Install Webcam Software**:
+   - Install 'fswebcam' for capturing images:
+     ```
+     sudo apt install fswebcam
+     ```
+
+3. **Testing the Webcam**:
+   - Capture an image to test the webcam:
+     ```
+     fswebcam test.jpg
+     ```
+   - View the captured image using an image viewer.
+
+#### Section 4: Configuring Sound
+1. **Sound Output Configuration**:
+   - Right-click on the sound icon on the top right.
+   - Select your output device (HDMI or 3.5mm jack).
+
+2. **Testing Sound**:
+   - Test the sound output by playing a sound file or video.
+
+#### Section 5: Capturing and Handling Images
+1. **Capture Image with Webcam**:
+   - Use `fswebcam` to capture an image:
+     ```
+     fswebcam -r 1280x720 --no-banner image.jpg
+     ```
+
+2. **View and Edit Images**:
+   - Install an image editor like GIMP:
+     ```
+     sudo apt install gimp
+     ```
+   - Open the captured image in GIMP for editing.
+
+#### Section 6: Recording and Playing Videos
+1. **Recording Video**:
+   - Install `ffmpeg` to record video from the webcam:
+     ```
+     sudo apt install ffmpeg
+     ```
+   - Record a video from the webcam:
+     ```
+     ffmpeg -f v4l2 -framerate 25 -video_size 640x480 -i /dev/video0 output.mp4
+     ```
+
+2. **Play Video**:
+   - Install VLC media player:
+     ```
+     sudo apt install vlc
+     ```
+   - Play the recorded video using VLC:
+     ```
+     vlc output.mp4
+     ```
+
+#### Section 7: Advanced Applications (Optional)
+- **Python Scripting for Webcam**:
+   - Introduction to using Python for controlling the webcam.
+- **Creating a Surveillance System**:
+   - Setting up motion detection using the webcam.
+
+#### Conclusion
+- Recap of the tasks completed.
+
+#### Troubleshooting
+- No video feed: Check webcam connections and drivers.
+- No sound: Verify sound output settings.
+
+### Additional Resources
+- Raspberry Pi Documentation: [Official Raspberry Pi Documentation](https://www.raspberrypi.org/documentation/)
+- Python Programming for Raspberry Pi: [Python Programming on Raspberry Pi](https://www.raspberrypi.org/documentation/usage/python/)
+
+This guide provides a comprehensive setup for beginners and can be expanded with more advanced topics based on the user's interest and proficiency.
