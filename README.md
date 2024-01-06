@@ -28,13 +28,9 @@ Click on "Save"
 Click on "Yes" and "Yes" again.
 
 
-
-
-
-
-
-   - Power on the Raspberry Pi.
-   - Follow the on-screen instructions to install the OS.
+- Power on the Raspberry Pi.
+- Connect to RPi 400 via SSH (e.g. use Putty).
+- Enable the VNC via "sudo raspi-config". Now with the arrows select Interfacing Options, navigate to VNC, choose Yes, and select Ok .
 
 #### Section 2: Configuring Raspberry Pi
 1. **Connect to Wi-Fi**: 
