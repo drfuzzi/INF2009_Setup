@@ -134,7 +134,7 @@
      ```
    - If you don’t hear anything, adjust the microphone levels using the sound settings or `alsamixer` in the terminal.
 
-#### Section 4: Advanced Applications (To Be Updated)
+#### Section 4: Advanced Applications (Optional)
 a. Setting up and using a Virtual Environment
 Using a Python virtual environment allows you to manage Python packages independently of the system packages. This is a recommended approach to avoid conflicts between packages installed via `apt` and `pip`.
 1. **Install Virtual Environment Package**:
