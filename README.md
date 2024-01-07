@@ -120,13 +120,22 @@
      ```
    - Look for your webcam in the list. The following image shows what you might see.
 ![arecord](https://github.com/drfuzzi/INF2009_Setup/assets/108112390/ce795948-b92a-4486-a933-eab2fe27b0b5)
-8. **Testing the Microphone**:
+8. **Use the arecord Command**:
    - To test if the microphone is working, record a short audio clip:
      ```
      arecord -D plughw:<CardNumber>,<DeviceNumber> -d 10 test.wav
      ```
    - Replace `<CardNumber>` and `<DeviceNumber>` with the numbers you found in the previous step. The `-d 10` flag tells `arecord` to record for 10 seconds.
-
+   - Based on the above screenshot, the USB audio device is listed as `card 2, device 0`, I specify these in the command.
+   - To record a short audio clip, use the following command in the terminal:
+     ```
+     arecord -D plughw:2,0 -d 10 test.wav
+     ```
+   - Here's what each part of the command means:
+     - `arecord`: This is the command to start recording audio.
+     - `-D plughw:2,0`: The `-D` option specifies the audio device. `plughw:2,0` refers to `card 2, device 0`, which is your USB audio device.
+     - `-d 10`: This option specifies the duration of the recording. `-d 10` means the recording will last for 10 seconds.
+     - `test.wav`: This is the name of the file where the audio will be saved. It will be saved in the current directory.
 9. **Playing the Recorded Audio**:
    - Play the recorded audio to check the quality:
      ```
