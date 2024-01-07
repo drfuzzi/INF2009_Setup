@@ -118,8 +118,8 @@
      ```
      arecord -l
      ```
-   - Look for your webcam in the list. It should be listed as a "USB Audio" with a specific device number.
-
+   - Look for your webcam in the list. The following image shows what you might see.
+![arecord](https://github.com/drfuzzi/INF2009_Setup/assets/108112390/ce795948-b92a-4486-a933-eab2fe27b0b5)
 8. **Testing the Microphone**:
    - To test if the microphone is working, record a short audio clip:
      ```
