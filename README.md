@@ -36,6 +36,7 @@
   sudo raspi-config
   ```
 ![raspiconfig](https://github.com/drfuzzi/INF2009_Setup/assets/108112390/8ea119c9-8b27-48b8-80b2-4f32821ffd51)
+
 3. **Setting Up a Static IP (Optional)**:
    - For easier connection, assign a static IP to your RPi 400.
    - Open Terminal and edit the `dhcpcd.conf` file:
