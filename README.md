@@ -25,7 +25,7 @@
 
 #### Section 2: Configuring Raspberry Pi
 1. **Assembling Hardware**:
-- Insert the MicroSD card into the Raspberry Pi 400.
+- Insert the MicroSD card, power adapter and USB Webcam into the Raspberry Pi 400.
 - Power on the Raspberry Pi.
 ![20240107_182836](https://github.com/drfuzzi/INF2009_Setup/assets/108112390/9fd5dfa1-ddee-4cb5-a557-0e4283a513a7)
 
