@@ -72,7 +72,10 @@
 #### Section 3: Setting Up and Testing the Webcam
 1. **Connecting the Webcam**:
    - Plug the webcam into a USB port on the RPi 400.
-   - The drivers for the webcam
+   - The drivers for the webcam should be automatically installed.
+     ```
+     lsusb
+     ```
 2. **Install Software to capture image**:
    - Ensure that you have internet access.
    - Install 'fswebcam' for capturing images:
