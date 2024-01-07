@@ -27,6 +27,7 @@
 1. **Assembling Hardware**:
 - Insert the MicroSD card into the Raspberry Pi 400.
 - Power on the Raspberry Pi.
+![20240107_182836](https://github.com/drfuzzi/INF2009_Setup/assets/108112390/9fd5dfa1-ddee-4cb5-a557-0e4283a513a7)
 
 2. **Enabling VNC**:
 - Connect to RPi 400 via SSH (e.g. use Putty).
@@ -52,15 +53,19 @@
      ```
    - Save and exit the editor (CTRL+X, then Y, then Enter).
    - Reboot the RPi 400.
+
 4. **Installing VNC Viewer on Your Laptop**:
    - Download and install VNC Viewer on your laptop from the official [VNC Viewer website](https://www.realvnc.com/en/connect/download/viewer/).
+
 5. **Connecting to the Raspberry Pi**:
    - Open VNC Viewer on your laptop.
    - Enter the IP address of your Raspberry Pi (same IP address as used with SSH) and press Enter.
    - When prompted, enter the Raspberry Pi's username and password.
+
 6. **Using Raspberry Pi Desktop Remotely**:
    - Once connected, you should see the Raspberry Pi's desktop interface on your laptop.
    - You can now use the Raspberry Pi as if you were working directly on it.
+
 7. **Update the RPi 400 System**:
    - Open Terminal.
    - Update the system with the following commands:
@@ -70,29 +75,34 @@
      ```
 
 #### Section 3: Setting Up and Testing the Webcam
+
 1. **Connecting the Webcam**:
    - Plug the webcam into a USB port on the RPi 400.
    - The drivers for the webcam should be automatically installed.
      ```
      lsusb
      ```
+
 2. **Install Software to capture image**:
    - Ensure that you have internet access.
    - Install 'fswebcam' for capturing images:
      ```
      sudo apt install fswebcam
      ```
+
 3. **Capture Image with Webcam**:
    - Use `fswebcam` to capture an image:
      ```
      fswebcam -r 1280x720 --no-banner image.jpg
      ```
+
 4. **View and Edit Images (Optional)**:
    - Install an image editor like GIMP:
      ```
      sudo apt install gimp
      ```
    - Open the captured image in GIMP for editing.
+
 5. **Recording Video**:
    - Install `ffmpeg` to record video from the webcam:
      ```
@@ -103,6 +113,7 @@
      ffmpeg -f v4l2 -framerate 25 -video_size 640x480 -i /dev/video0 output.mp4
      ```
    - this command tells ffmpeg to capture video from the first connected webcam at a resolution of 640x480 pixels and a frame rate of 25 fps, and save it to a file named output.mp4. In addition, "-f" specifies the format to be used while "v4l2" stands for Video4Linux2, which is the standard video driver model for Linux for video capture.
+
 6. **Play Video (Optional)**:
    - Install VLC media player:
      ```
@@ -112,6 +123,7 @@
      ```
      vlc output.mp4
      ```
+
 7. **Checking for Audio Device**:
    - First, check if your system has recognized the webcam's microphone.
    - Open Terminal and type the following command to list all audio input devices:
@@ -120,6 +132,7 @@
      ```
    - Look for your webcam in the list. The following image shows what you might see.
 ![arecord](https://github.com/drfuzzi/INF2009_Setup/assets/108112390/ce795948-b92a-4486-a933-eab2fe27b0b5)
+
 8. **Use the arecord Command**:
    - To test if the microphone is working, record a short audio clip:
      ```
@@ -136,6 +149,7 @@
      - `-D plughw:2,0`: The `-D` option specifies the audio device. `plughw:2,0` refers to `card 2, device 0`, which is your USB audio device.
      - `-d 10`: This option specifies the duration of the recording. `-d 10` means the recording will last for 10 seconds.
      - `test.wav`: This is the name of the file where the audio will be saved. It will be saved in the current directory.
+
 9. **Playing the Recorded Audio**:
    - Play the recorded audio to check the quality:
      ```
@@ -144,26 +158,32 @@
    - If you don’t hear anything, adjust the microphone levels using the sound settings or `alsamixer` in the terminal.
 
 #### Section 4: Advanced Applications (Optional)
+
 a. Setting up and using a Virtual Environment
 Using a Python virtual environment allows you to manage Python packages independently of the system packages. This is a recommended approach to avoid conflicts between packages installed via `apt` and `pip`.
+
 1. **Install Virtual Environment Package**:
    ```bash
    sudo apt install python3-venv
    ```
+
 2. **Create a Virtual Environment**:
    Navigate to the directory where you want to create your virtual environment and run:
    ```bash
    python3 -m venv myenv
    ```
+
 3. **Activate the Virtual Environment**:
    ```bash
    source myenv/bin/activate
    ```
+
 4. **Install Packages Using pip**:
    Now you can install packages using pip without encountering the `externally-managed-environment` error:
    ```bash
    pip install opencv-python
    ```
+
 5. **Upgrade pip**:
    Ensure you are using the latest version of pip:
    ```bash
