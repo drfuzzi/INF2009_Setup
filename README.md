@@ -16,6 +16,7 @@
 
 - You will see the following when you click on "Edit Settings".
 ![imager2](https://github.com/drfuzzi/INF2009_Setup/assets/108112390/21ba2607-cd45-4406-830f-95732daf01ed)
+![settings](https://github.com/drfuzzi/INF2009_Setup/assets/108112390/588dbd32-0d1b-41fe-9a00-d2b6607daa71)
    - Give a unique name for your RPi hostname.
    - Pick an appropriate username and password
    - Configure the WiFi to your hotspot (SIT WiFi doesnt work well with RPi)
