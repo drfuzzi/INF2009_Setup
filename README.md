@@ -135,10 +135,40 @@
    - If you don’t hear anything, adjust the microphone levels using the sound settings or `alsamixer` in the terminal.
 
 #### Section 4: Advanced Applications (To Be Updated)
-- **Python Scripting for Webcam**:
+a. Setting up and using a Virtual Environment
+Using a Python virtual environment allows you to manage Python packages independently of the system packages. This is a recommended approach to avoid conflicts between packages installed via `apt` and `pip`.
+1. **Install Virtual Environment Package**:
+   ```bash
+   sudo apt install python3-venv
+   ```
+2. **Create a Virtual Environment**:
+   Navigate to the directory where you want to create your virtual environment and run:
+   ```bash
+   python3 -m venv myenv
+   ```
+3. **Activate the Virtual Environment**:
+   ```bash
+   source myenv/bin/activate
+   ```
+4. **Install Packages Using pip**:
+   Now you can install packages using pip without encountering the `externally-managed-environment` error:
+   ```bash
+   pip install opencv-python
+   ```
+5. **Upgrade pip**:
+   Ensure you are using the latest version of pip:
+   ```bash
+   pip install --upgrade pip
+   ```
+Remember, after using the virtual environment, you can deactivate it by simply running `deactivate` in your terminal. Using virtual environments is a good practice as it keeps your global Python environment clean and prevents version conflicts between different Python projects.
+
+b. **Python Scripting for Webcam**:
    - Introduction to using Python for controlling the webcam.
-- **Creating a Surveillance System**:
+   - [Here](adv/capimg.py) is a simple script to capture a single video frame from the webcam and save it.
+
+c. **Creating a Surveillance System**:
    - Setting up motion detection using the webcam.
+   - [Here](adv/capvid.py) is another simple script to stream a video from the webcam and notify on screen if you detect motion using simple algorithm.
 
 ### Additional Resources
 - Raspberry Pi Documentation: [Official Raspberry Pi Documentation](https://www.raspberrypi.org/documentation/)
