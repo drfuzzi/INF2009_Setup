@@ -14,12 +14,13 @@
 - Choose the following options and click 'Next':
 ![imager](https://github.com/drfuzzi/INF2009_Setup/assets/108112390/9abdedc2-2693-44ff-9a48-0ac1dfd688ad)
 
-You will see the following when you click on "Edit Settings".
-Give a unique name for your RPi hostname.
-Pick an appropriate username and password
-Configure the WiFi to your hotspot (SIT WiFi doesnt work well with RPi)
-Click on "Save"
-Click on "Yes" and "Yes" again.
+- You will see the following when you click on "Edit Settings".
+![imager2](https://github.com/drfuzzi/INF2009_Setup/assets/108112390/21ba2607-cd45-4406-830f-95732daf01ed)
+   - Give a unique name for your RPi hostname.
+   - Pick an appropriate username and password
+   - Configure the WiFi to your hotspot (SIT WiFi doesnt work well with RPi)
+   - Click on "Save"
+   - Click on "Yes" and "Yes" again.
 
 2. **Assembling Hardware**:
    - Connect the Raspberry Pi 400 to the monitor, keyboard, and mouse.
