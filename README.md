@@ -2,23 +2,17 @@
 
 #### Materials Needed
 - Raspberry Pi 400
-- Compatible webcam
-- MicroSD card with NOOBS or Raspberry Pi OS
-- Monitor, keyboard, mouse
-- Speakers or headphones
-- Internet connection
+- MicroSD card with Raspberry Pi OS
+- Logitech C310 HD Webcam
+- Internet connection (Mobile Hotspot)
 
 #### Section 1: Setting Up Raspberry Pi 400
-1. **Assembling Hardware**:
-   - Connect the Raspberry Pi 400 to the monitor, keyboard, and mouse.
-   - Insert the MicroSD card into the slot.
-
-2. **Install Raspberry Pi OS**:
-Download the official imager software from the following link and install it.
-https://downloads.raspberrypi.org/imager/imager_latest.exe
-Connect the microSD card into the PC
-Start the Imager software
-Choose the following options and click 'Next':
+1. **Install Raspberry Pi OS**:
+- Download the official Imager Software from the following link and install it: https://downloads.raspberrypi.org/imager/imager_latest.exe
+- Connect the microSD card into the PC
+- Start the Imager software
+- Choose the following options and click 'Next':
+![imager](https://github.com/drfuzzi/INF2009_Setup/assets/108112390/9abdedc2-2693-44ff-9a48-0ac1dfd688ad)
 
 You will see the following when you click on "Edit Settings".
 Give a unique name for your RPi hostname.
@@ -27,6 +21,9 @@ Configure the WiFi to your hotspot (SIT WiFi doesnt work well with RPi)
 Click on "Save"
 Click on "Yes" and "Yes" again.
 
+2. **Assembling Hardware**:
+   - Connect the Raspberry Pi 400 to the monitor, keyboard, and mouse.
+   - Insert the MicroSD card into the slot.
 
 - Power on the Raspberry Pi.
 - Connect to RPi 400 via SSH (e.g. use Putty).
