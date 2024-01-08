@@ -195,9 +195,18 @@ b. **Python Scripting for Webcam**:
    - Introduction to using Python for controlling the webcam.
    - [Here](adv/capimg.py) is a simple script to capture a single video frame from the webcam and save it.
 
-c. **Creating a Surveillance System**:
+c. **Mock Exercise - Creating a Surveillance System**:
    - Setting up motion detection using the webcam.
    - [Here](adv/capvid.py) is another simple script to stream a video from the webcam and notify on screen if you detect motion using simple algorithm.
+
+#### Section 5: Questions to think about
+
+1. Identify and explain the additional functionalities introduced in Code #2. How do these changes transform the program from a simple image capture to a movement detection system?
+2. Several new OpenCV functions are used (like cv2.absdiff, cv2.cvtColor, cv2.GaussianBlur, cv2.threshold, cv2.dilate, and cv2.findContours). Research each of these functions and understand their role in processing the video frames for movement detection.
+3. The program uses specific conditions (such as contour area) to decide when to draw rectangles and indicate movement. Experiment with these parameters to see how they affect the accuracy and sensitivity of movement detection.
+4. Loop Mechanics and Video Processing: Analyze the role of the while loop in the 2nd Code for continuous video capture and processing. How does this looping mechanism differ from the single capture approach in the 1st Code, especially in terms of real-time processing and movement detection?
+5.  Consider aspects like improving the accuracy of movement detection, optimizing performance, or adding new features (like recording video when movement is detected).
+
 
 ### Additional Resources
 - Raspberry Pi Documentation: [Official Raspberry Pi Documentation](https://www.raspberrypi.org/documentation/)
