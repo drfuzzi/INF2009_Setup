@@ -20,6 +20,7 @@
    - Give a unique name for your RPi hostname.
    - Pick an appropriate username and password
    - Configure the WiFi to your hotspot (SIT WiFi doesnt work well with RPi)
+   - Also enable SSH in the services tab (to SSH to Pi later)
    - Click on "Save"
    - Click on "Yes" and "Yes" again.
 
@@ -32,6 +33,10 @@
 2. **Enabling VNC**:
 - Connect to RPi 400 via SSH (e.g. use Putty).
 - You can find the RPi400's IP via your mobile hotspot or router.
+- [Optional] If you are not using a Rasperry PI without keyboard, you need to enable VNC option without keyboard by the below command
+  ```
+  sudo apt install haveged
+  ```
 - Enable the VNC using the following command and selecting "Interfacing Options", navigate to "VNC", choose "Yes", select "Ok" and select "Finish".
   ```
   sudo raspi-config
