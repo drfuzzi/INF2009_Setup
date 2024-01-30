@@ -33,6 +33,7 @@
 2. **Enabling VNC**:
 - Connect to RPi 400 via SSH (e.g. use Putty).
 - You can find the RPi400's IP via your mobile hotspot or router.
+   - Alternatively, you may use the following: `raspberrypi.local` (assuming you named your device as raspberrypi)
 - [Optional] If you are using a Rasperry PI without keyboard, you need to enable VNC option without keyboard by the below command
   ```
   sudo apt install haveged
